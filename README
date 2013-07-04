@@ -2,7 +2,7 @@ CSS-Grid
 ========
 
 CSS3 Flex-Box based Grid System
-```
+
 @font-size: 16; // Your basic font-size
 @em: @font-size*1em;
 @column: 48; //width of columns
@@ -40,8 +40,7 @@ div.containing {
 div.containing p {
     .child(3); //child element of div.containing with half width
 }
-```
-```
+
 
 // Related HTML Code
 
@@ -53,4 +52,3 @@ div.containing p {
   </div>
   <div class="example">Another div</div>
 </body>
-```
