@@ -2,7 +2,7 @@ CSS-Grid
 ========
 
 CSS3 Flex-Box based Grid System
-
+```
 @font-size: 16; // Your basic font-size
 @em: @font-size*1em;
 @column: 48; //width of columns
@@ -51,3 +51,4 @@ div.containing p {
   </div>
   <div class="example">Another div</div>
 </body>
+```
