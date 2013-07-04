@@ -40,6 +40,8 @@ div.containing {
 div.containing p {
     .child(3); //child element of div.containing with half width
 }
+```
+```
 
 // Related HTML Code
 
