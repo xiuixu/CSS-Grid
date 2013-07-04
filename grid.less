@@ -1,0 +1,29 @@
+//    by Niklas Buschmann
+//    licensed under CC0    <http://creativecommons.org/publicdomain/zero/1.0/>
+//    based on:
+//      Frameless           <http://framelessgrid.com/>
+//      by Joni Korpi       <http://jonikorpi.com/>
+//      licensed under CC0  <http://creativecommons.org/publicdomain/zero/1.0/>
+
+@font-size: 16;
+@em: @font-size*1em;
+@column: 48;
+@gutter: 36;
+.parent () {
+    display: flex;
+    flex-flow: row wrap;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+}
+.child (@cols:1; @margin: 1;) {
+    margin: 0 (@gutter / 2 / @em * @margin);
+    flex: @cols 1 (@cols * (@column + @gutter) - (@gutter * @margin)) / @em;
+    -webkit-flex: @cols 1 (@cols * (@column + @gutter) - (@gutter * @margin)) / @em;
+}
+body {
+    @media screen {
+    font-size: (@font-size + 2) / @em;
+    @media (min-width: 80em) {font-size: (@font-size + 4) / @em;}
+    @media (min-width: 120em) {font-size: (@font-size + 6) / @em;}
+    }
+}
