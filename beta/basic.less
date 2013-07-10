@@ -1,0 +1,40 @@
+@import url("template.less");
+
+
+body {
+    background-color: darken(white, 7%);
+}
+nav {
+    .cc();
+    .bground(lighten(black, 10%));
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+    padding: 1em .5em;
+    box-shadow: 0 0 .3em dimgray;
+    ul {
+        margin: 0;
+        padding: 0;
+        .cc();
+        li {
+            list-style-type: none;
+            .c(1.5);
+            padding: .5em 0;
+        }
+    }
+}
+#content {
+    .p();
+    background-color: white;
+    box-shadow: 0 0 .3em dimgray;
+    div {
+        .c(6);
+    }
+    .cont {
+        .cc(6);
+        div {
+            .c(3);
+        }
+    }
+    border-bottom-left-radius: .2em;
+    border-bottom-right-radius: .2em;
+}
