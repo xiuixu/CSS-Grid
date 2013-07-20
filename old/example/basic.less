@@ -1,0 +1,60 @@
+//    by Niklas Buschmann
+//    licensed under CC0    <http://creativecommons.org/publicdomain/zero/1.0/>
+//    based on:
+//      Frameless           <http://framelessgrid.com/>
+//      by Joni Korpi       <http://jonikorpi.com/>
+//      licensed under CC0  <http://creativecommons.org/publicdomain/zero/1.0/>
+
+@font-size: 16;
+@em: @font-size*1em;
+@column: 48;
+@gutter: 36;
+.parent () {
+    display: flex;
+    flex-flow: row wrap;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+}
+.child (@cols:1; @margin: 1;) {
+    margin: 0 (@gutter / 2 / @em * @margin);
+    flex: @cols 1 (@cols * (@column + @gutter) - (@gutter * @margin)) / @em;
+    -webkit-flex: @cols 1 (@cols * (@column + @gutter) - (@gutter * @margin)) / @em;
+}
+body { //custom zoom
+    @media screen {
+    font-size: (@font-size + 2) / @em;
+    @media (min-width: 80em) {font-size: (@font-size + 4) / @em;}
+    @media (min-width: 120em) {font-size: (@font-size + 6) / @em;}
+    }
+}
+
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic");
+@import url("http://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic");
+@sans: "Source Sans Pro";
+@serif: "Gentium Basic";
+
+p {
+    text-align: justify;
+    font-weight: 300;
+    font-family: @sans;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: @serif;
+    font-weight: 200;
+}
+
+body {
+    .parent();
+}
+
+
+body > section {
+    .child(6);
+}
+body > section > section {
+    .child(3);
+}
+.cont {
+    .child(6; 0);
+    .parent();
+}
