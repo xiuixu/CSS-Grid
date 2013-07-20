@@ -51,3 +51,15 @@ body > div {
         }
     }
 }
+
+header, div, footer {
+    display: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    header, div, footer {
+        display: inherit;
+    }
+    h3 {
+        display: none;
+    }
+}
