@@ -1,0 +1,53 @@
+@import url("grid.less");
+
+body {
+    background-color: darken(white, 10%);
+    display: flex;
+    display: -webkit-flex;
+    margin: 3% ~"calc(6% - 1em)";
+}
+nav, footer li {
+    margin: .5em 0;
+    .child(1.5);
+}
+footer {
+    a {color: lighten(black, 30%)};
+    ul {
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        li {
+            flex-grow: 0;
+            -webkit-flex-grow: 0;
+        }
+    }
+}
+header {
+    .bground(lighten(black, 10%));
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+}
+header, body > div {
+    box-shadow: 0 0 .3em dimgray;
+}
+body > div {
+    background-color: white;
+    border-bottom-left-radius: .2em;
+    border-bottom-right-radius: .2em;
+    div {
+        .child(6);
+        align-content: flex-start;
+        -webkit-align-content: flex-start;
+        p {
+            margin: .3em 0;
+        }
+    }
+    h2 {
+        margin-top: .5em 0 0 0;
+    }
+    .cont {
+        padding: 0;
+        div {
+            .child(3);
+        }
+    }
+}
