@@ -1,0 +1,30 @@
+//    by Niklas Buschmann
+//    licensed under CC0    <http://creativecommons.org/publicdomain/zero/1.0/>
+//    based on:
+//      Frameless           <http://framelessgrid.com/>
+//      by Joni Korpi       <http://jonikorpi.com/>
+//      licensed under CC0  <http://creativecommons.org/publicdomain/zero/1.0/>
+
+@font-size: 16;
+@em: @font-size*1em;
+@column: 48;
+@gutter: 36;
+
+
+.child (@cols) {
+    padding: 0 (@gutter / 2 / @em);
+    flex: @cols 1 @cols * (@column + @gutter) / @em;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section {
+    padding: 0;
+    border: 0;
+    display: inherit;
+    flex: auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
